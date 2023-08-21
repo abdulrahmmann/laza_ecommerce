@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laza/core/utils/app_routers.dart';
 
 void main() {
   runApp(const Laza());
@@ -9,6 +10,10 @@ class Laza extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(
+      routerConfig: AppRouters().router,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+    );
   }
 }

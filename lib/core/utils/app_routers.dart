@@ -17,36 +17,12 @@ class AppRouters {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const FirstSplashView(), // SplashView
+        builder: (context, state) => const SecondSplashView(), // SplashView
       ),
       GoRoute(
         path: kSecondSplashView,
         builder: (context, state) => const SecondSplashView(),
       ),
-      // GoRoute(
-      //   path: kGetStartedView,
-      //   builder: (context, state) => const GetStartedView(),
-      // ),
-      // GoRoute(
-      //   path: kSignUpView,
-      //   builder: (context, state) => const SignUpView(),
-      // ),
-      // GoRoute(
-      //   path: kSignInView,
-      //   builder: (context, state) => const SignInView(),
-      // ),
-      // GoRoute(
-      //   path: kForgotPassword,
-      //   builder: (context, state) => const ForgotPasswordView(),
-      // ),
-      // GoRoute(
-      //   path: kVerificationCodeView,
-      //   builder: (context, state) => const VerificationCodeView(),
-      // ),
-      // GoRoute(
-      //   path: kNewPasswordView,
-      //   builder: (context, state) => const NewPasswordView(),
-      // ),
       ],
   );
 }
