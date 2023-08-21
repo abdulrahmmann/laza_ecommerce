@@ -13,12 +13,13 @@ class GetStartedViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
     return ListView(
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 35),
+            SizedBox(height: height*.046),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: CustomCircleWidgets(
@@ -26,7 +27,7 @@ class GetStartedViewBody extends StatelessWidget {
                 image: AppAssets.left_arrow,
               ),
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: height*.02),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Align(
@@ -39,27 +40,27 @@ class GetStartedViewBody extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 75),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+            SizedBox(height: height*.099),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomSocialMediaButton(
+                    const CustomSocialMediaButton(
                       image: AppAssets.facebook_logo,
                       text: 'Facebook',
                       backgroundColor: AppColors.kBlueDarkColor,
                     ),
-                    SizedBox(height: 10),
-                    CustomSocialMediaButton(
+                    SizedBox(height: height*.012),
+                    const CustomSocialMediaButton(
                       image: AppAssets.twitter_logo,
                       text: 'Twitter',
                       backgroundColor: AppColors.kBlueLightColor,
                     ),
-                    SizedBox(height: 10),
-                    CustomSocialMediaButton(
+                    SizedBox(height: height*.012),
+                    const CustomSocialMediaButton(
                       image: AppAssets.google_logo,
                       text: 'Google',
                       backgroundColor: AppColors.kRedColor,
@@ -68,8 +69,7 @@ class GetStartedViewBody extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 224),
-
+            SizedBox(height: height*.293),
             Column(
               children: [
                 Row(
@@ -92,7 +92,7 @@ class GetStartedViewBody extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 25),
+                SizedBox(height: height*.035,),
                 const CustomAuthPurpleButton(text: 'Create an Account'),
               ],
             ),
