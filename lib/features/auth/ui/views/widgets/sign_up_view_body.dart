@@ -71,7 +71,8 @@ class SignUpViewBody extends StatelessWidget {
                     Text(
                       'Remember me',
                       style: AppStyles.textStyle13.copyWith(
-                        color: AppColors.kBlackColor
+                        color: AppColors.kBlackColor,
+                          fontWeight: FontWeight.w600
                       ),
                     ),
                     Checkbox(
