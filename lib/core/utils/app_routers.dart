@@ -1,6 +1,7 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:laza/features/auth/ui/views/get_started_view.dart';
+import 'package:laza/features/auth/ui/views/sign_up_view.dart';
 import 'package:laza/features/splash/ui/views/second_splash_view.dart';
 
 class AppRouters {
@@ -17,7 +18,7 @@ class AppRouters {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const GetStartedView(), // FirstSplashView
+        builder: (context, state) => const SignUpView(), // FirstSplashView
       ),
       GoRoute(
         path: kSecondSplashView,
@@ -26,6 +27,10 @@ class AppRouters {
       GoRoute(
         path: kGetStartedView,
         builder: (context, state) => const GetStartedView(),
+      ),
+      GoRoute(
+        path: kSignUpView,
+        builder: (context, state) => const SignUpView(),
       ),
       ],
   );

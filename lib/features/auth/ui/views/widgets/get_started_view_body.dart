@@ -31,7 +31,7 @@ class GetStartedViewBody extends StatelessWidget {
               SizedBox(height: height*.02),
               Text(
                 'Let’s Get Started',
-                style: AppStyles.textStyle25.copyWith(
+                style: AppStyles.textStyle28.copyWith(
                   color: AppColors.kBlackColor,
                 ),
                 textAlign: TextAlign.center,
