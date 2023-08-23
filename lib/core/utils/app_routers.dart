@@ -1,5 +1,6 @@
 
 import 'package:go_router/go_router.dart';
+import 'package:laza/features/auth/ui/views/forgot_password_view.dart';
 import 'package:laza/features/auth/ui/views/get_started_view.dart';
 import 'package:laza/features/auth/ui/views/sign_in_view.dart';
 import 'package:laza/features/auth/ui/views/sign_up_view.dart';
@@ -19,7 +20,7 @@ class AppRouters {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SignInView(), // FirstSplashView
+        builder: (context, state) => const ForgotPasswordView(), // FirstSplashView
       ),
       GoRoute(
         path: kSecondSplashView,
@@ -36,6 +37,10 @@ class AppRouters {
       GoRoute(
         path: kSignInView,
         builder: (context, state) => const SignInView(),
+      ),
+      GoRoute(
+        path: kForgotPassword,
+        builder: (context, state) => const ForgotPasswordView(),
       ),
       ],
   );

@@ -105,22 +105,21 @@ class SignInViewBody extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: height * 0.12),
 
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Text(
+                    'By connecting your account confirm that you agree with our Term and Condition',
+                    style: AppStyles.textStyle13.copyWith(
+                        color: AppColors.kGreyColor
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+              ),
             ],
           ),
         ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width*.85,
-          child: Text(
-              'By connecting your account confirm that you agree with our Term and Condition',
-            style: AppStyles.textStyle13.copyWith(
-              color: AppColors.kGreyColor
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
-
-        SizedBox(height: height*.03,),
         ///////////  button ///////////
         const CustomAuthPurpleButton(text: 'Sign In'),
 
