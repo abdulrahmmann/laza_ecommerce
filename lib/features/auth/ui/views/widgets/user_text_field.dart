@@ -21,7 +21,7 @@ class UserTextField extends StatelessWidget {
       obscureText: obscureTex,
       style: AppStyles.textStyle17.copyWith(
           color: AppColors.kBlackColor,
-          fontWeight: FontWeight.w600
+          fontWeight: FontWeight.w500
       ),
       decoration: InputDecoration(
         labelText: labelText,
@@ -29,10 +29,10 @@ class UserTextField extends StatelessWidget {
             color: AppColors.kGreyColor,
             fontWeight: FontWeight.w500
         ),
-        focusedBorder: UnderlineInputBorder(
+        focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: AppColors.kGreyColor)
         ),
-        enabledBorder: UnderlineInputBorder(
+        enabledBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.kGreyColor)
         )
       ),
