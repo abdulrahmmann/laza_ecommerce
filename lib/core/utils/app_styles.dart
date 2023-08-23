@@ -42,5 +42,13 @@ class AppStyles {
     height: 1.4,
   );
 
+  static const textStyle22 = TextStyle(
+    fontSize: 22,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0, // -0.75%
+    height: 1.1,
+  );
+
 
 }

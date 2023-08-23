@@ -19,7 +19,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
         Expanded(
           child: ListView(
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding: EdgeInsets.only(right: 20, left: 20, top: 25),
