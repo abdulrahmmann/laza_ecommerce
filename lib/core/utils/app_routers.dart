@@ -2,6 +2,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:laza/features/auth/ui/views/forgot_password_view.dart';
 import 'package:laza/features/auth/ui/views/get_started_view.dart';
+import 'package:laza/features/auth/ui/views/new_password_view.dart';
 import 'package:laza/features/auth/ui/views/sign_in_view.dart';
 import 'package:laza/features/auth/ui/views/sign_up_view.dart';
 import 'package:laza/features/auth/ui/views/verification_code_view.dart';
@@ -46,6 +47,10 @@ class AppRouters {
       GoRoute(
         path: kVerificationCodeView,
         builder: (context, state) => const VerificationCodeView(),
+      ),
+      GoRoute(
+        path: kNewPasswordView,
+        builder: (context, state) => const NewPasswordView(),
       ),
       ],
   );
