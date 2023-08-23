@@ -6,6 +6,8 @@ import 'package:laza/core/utils/app_colors.dart';
 import 'package:laza/core/utils/app_styles.dart';
 import 'package:laza/features/auth/ui/views/widgets/custom_auth_purple_button.dart';
 import 'package:laza/features/auth/ui/views/widgets/custom_circle_widget.dart';
+import 'package:laza/features/auth/ui/views/widgets/verification_code_text_field.dart';
+import 'package:laza/features/auth/ui/views/widgets/verification_code_view_body.dart';
 
 class VerificationCodeViewBody extends StatelessWidget {
   const VerificationCodeViewBody({super.key});
@@ -43,17 +45,20 @@ class VerificationCodeViewBody extends StatelessWidget {
               // code
               SizedBox(height: height*.035),
 
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              const Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 10,
+                runSpacing: 10,
+                direction: Axis.horizontal,
                 children: [
-                  VerificationCodeTextField(),
-                  VerificationCodeTextField(),
-                  VerificationCodeTextField(),
-                  VerificationCodeTextField(),
+                  VerificationCodeTextField(first: true, last: false),
+                  VerificationCodeTextField(first: false, last: false),
+                  VerificationCodeTextField(first: false, last: false),
+                  VerificationCodeTextField(first: false, last: true),
                 ],
               ),
 
-              // code
+
 
               SizedBox(height: height*.12),
               Row(
@@ -80,43 +85,6 @@ class VerificationCodeViewBody extends StatelessWidget {
         ),
         const CustomAuthPurpleButton(text: 'Confirm Code'),
       ],
-    );
-  }
-}
-
-class VerificationCodeTextField extends StatelessWidget {
-  const VerificationCodeTextField({super.key, this.autofocus = false});
-
-  final bool autofocus;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 98,
-      child: TextField(
-        textAlign: TextAlign.center,
-        style: AppStyles.textStyle22.copyWith(
-          color: AppColors.kBlackColor
-        ),
-        minLines: 1,
-        maxLines: 1,
-        maxLength: 1,
-        autofocus: autofocus,
-        cursorWidth: 1,
-        cursorColor: AppColors.kPrimaryColor,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(width: 2, color: AppColors.kGreyColor)
-          ),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(width: 2, color: AppColors.kPrimaryColor)
-          ),
-          counterText: '',
-        ),
-      ),
     );
   }
 }
