@@ -6,6 +6,7 @@ import 'package:laza/features/auth/ui/views/new_password_view.dart';
 import 'package:laza/features/auth/ui/views/sign_in_view.dart';
 import 'package:laza/features/auth/ui/views/sign_up_view.dart';
 import 'package:laza/features/auth/ui/views/verification_code_view.dart';
+import 'package:laza/features/splash/ui/views/first_splash_view.dart';
 import 'package:laza/features/splash/ui/views/second_splash_view.dart';
 
 class AppRouters {
@@ -22,7 +23,7 @@ class AppRouters {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const VerificationCodeView(), // FirstSplashView
+        builder: (context, state) => const FirstSplashView(), // FirstSplashView
       ),
       GoRoute(
         path: kSecondSplashView,

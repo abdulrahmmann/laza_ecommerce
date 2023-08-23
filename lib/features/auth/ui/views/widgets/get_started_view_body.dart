@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:laza/core/utils/app_assets.dart';
 import 'package:laza/core/utils/app_colors.dart';
+import 'package:laza/core/utils/app_routers.dart';
 import 'package:laza/core/utils/app_styles.dart';
 
 import 'custom_auth_purple_button.dart';
@@ -77,7 +79,7 @@ class GetStartedViewBody extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  //
+                  GoRouter.of(context).push(AppRouters.kSignInView);
                 },
                 child: Text(
                   'Signin',
@@ -91,7 +93,12 @@ class GetStartedViewBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: height * 0.035),
-        const CustomAuthPurpleButton(text: 'Create an Account'),
+        CustomAuthPurpleButton(
+            text: 'Create an Account',
+          onTap: () {
+            GoRouter.of(context).push(AppRouters.kSignUpView);
+          },
+        ),
       ],
     );
   }

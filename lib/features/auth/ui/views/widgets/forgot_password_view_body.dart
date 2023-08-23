@@ -1,8 +1,10 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:laza/core/utils/app_assets.dart';
 import 'package:laza/core/utils/app_colors.dart';
+import 'package:laza/core/utils/app_routers.dart';
 import 'package:laza/core/utils/app_styles.dart';
 import 'package:laza/features/auth/ui/views/widgets/custom_auth_purple_button.dart';
 import 'package:laza/features/auth/ui/views/widgets/custom_circle_widget.dart';
@@ -63,7 +65,12 @@ class ForgotPasswordViewBody extends StatelessWidget {
             ],
           ),
         ),
-        const CustomAuthPurpleButton(text: 'Confirm Mail'),
+        CustomAuthPurpleButton(
+            text: 'Confirm Mail',
+          onTap: () {
+            GoRouter.of(context).push(AppRouters.kVerificationCodeView);
+          },
+        ),
       ],
     );
   }

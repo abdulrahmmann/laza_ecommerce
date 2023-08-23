@@ -1,7 +1,9 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:laza/core/utils/app_colors.dart';
+import 'package:laza/core/utils/app_routers.dart';
 import 'package:laza/core/utils/app_styles.dart';
 import 'package:laza/features/auth/ui/views/widgets/custom_auth_purple_button.dart';
 import 'package:laza/features/auth/ui/views/widgets/custom_circle_widget.dart';
@@ -71,11 +73,16 @@ class SignInViewBody extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 20),
                 child: Align(
                   alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forgot password?',
-                    style: AppStyles.textStyle15.copyWith(
-                      color: AppColors.kRedColor,
-                      fontWeight: FontWeight.w600
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouters.kForgotPassword);
+                    },
+                    child: Text(
+                      'Forgot password?',
+                      style: AppStyles.textStyle15.copyWith(
+                        color: AppColors.kRedColor,
+                        fontWeight: FontWeight.w600
+                      ),
                     ),
                   ),
                 ),

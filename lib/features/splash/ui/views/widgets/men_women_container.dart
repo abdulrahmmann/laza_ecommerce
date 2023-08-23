@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:laza/core/utils/app_colors.dart';
+import 'package:laza/core/utils/app_routers.dart';
 import 'package:laza/core/utils/app_styles.dart';
 
 import 'men_women_button.dart';
@@ -14,7 +16,7 @@ class MenWomenContainer extends StatefulWidget {
 
 class _MenWomenContainerState extends State<MenWomenContainer> {
 
-  bool _isMenSelected = true;
+  bool _isWomenSelected = true;
 
   @override
   Widget build(BuildContext context) {
@@ -48,12 +50,12 @@ class _MenWomenContainerState extends State<MenWomenContainer> {
           Row(
             children: [
               MenWomenButton(
-                backgroundColor: _isMenSelected ? AppColors.kPrimaryColor : AppColors.kWhiteGreyColor,
-                textColor: _isMenSelected ? AppColors.kWhiteColor : AppColors.kGreyColor,
+                backgroundColor: _isWomenSelected ? AppColors.kWhiteGreyColor : AppColors.kPrimaryColor,
+                textColor: _isWomenSelected ? AppColors.kGreyColor : AppColors.kWhiteColor,
                 text: 'Men',
                 onTap: () {
                   setState(() {
-                    _isMenSelected = true;
+                    _isWomenSelected = false;
                   });
                 },
               ),
@@ -61,12 +63,12 @@ class _MenWomenContainerState extends State<MenWomenContainer> {
               const SizedBox(width: 10),
 
               MenWomenButton(
-                backgroundColor: _isMenSelected ? AppColors.kWhiteGreyColor : AppColors.kPrimaryColor,
-                textColor: _isMenSelected ? AppColors.kGreyColor : AppColors.kWhiteColor,
+                backgroundColor: _isWomenSelected ? AppColors.kPrimaryColor : AppColors.kWhiteGreyColor,
+                textColor: _isWomenSelected ? AppColors.kWhiteColor : AppColors.kGreyColor,
                 text: 'Women',
                 onTap: () {
                   setState(() {
-                    _isMenSelected = false;
+                    _isWomenSelected = true;
                   });
                 },
               ),
@@ -74,10 +76,15 @@ class _MenWomenContainerState extends State<MenWomenContainer> {
           ),
 
           const SizedBox(height: 20),
-          Text(
-            'Skip',
-            style: AppStyles.textStyle17.copyWith(
-                color: AppColors.kGreyColor
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(AppRouters.kGetStartedView);
+            },
+            child: Text(
+              'Skip',
+              style: AppStyles.textStyle17.copyWith(
+                  color: AppColors.kGreyColor
+              ),
             ),
           )
         ],
