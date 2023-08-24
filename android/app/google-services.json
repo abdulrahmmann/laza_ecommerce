@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "559254163826",
+    "project_id": "laza-4c8d7",
+    "storage_bucket": "laza-4c8d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559254163826:android:ae6b9712a02795caac4deb",
+        "android_client_info": {
+          "package_name": "com.example.laza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559254163826-28kooo0lrd8njasrb7q70pcrofjmfsl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5ypfzR9-dUuefudgCwxEJDdmq8eEjXe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559254163826-28kooo0lrd8njasrb7q70pcrofjmfsl7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "559254163826-b3g9v4a26u02392kc1irbfg4omv5oqji.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.laza"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
