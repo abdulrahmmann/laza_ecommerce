@@ -7,13 +7,20 @@ class UserTextField extends StatelessWidget {
   const UserTextField(
       {super.key,
         this.obscureTex = false,
-        required this.labelText});
+        required this.labelText,
+        required this.validator,
+        required this.onChanged});
 
   final bool obscureTex;
   final String labelText;
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
+
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: validator,
+      onChanged: onChanged,
       cursorColor: AppColors.kBlackColor,
       cursorWidth: 1,
       maxLines: 1,
